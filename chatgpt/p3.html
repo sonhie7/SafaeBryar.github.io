@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safae Br — Data Analyst Portfolio</title>
+<style>
+  /* --- VARIABLES --- */
+  :root {
+    --bg: #F8F8FF;
+    --panel: #fff;
+    --accent1: #8257E5;
+    --accent2: #B894FF;
+    --text: #1A1C23;
+    --text-muted: #5E657A;
+    --shadow: rgba(130,87,229,0.15);
+    --radius: 12px;
+    --transition: 0.3s ease;
+  }
+
+  /* --- RESET --- */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--text); line-height:1.6; }
+
+  /* --- SIDEBAR --- */
+  #sidebar {
+    position: fixed; top:0; left:0; width:220px; height:100%; background:#fff;
+    border-right:1px solid #eee; padding:3rem 1rem; display:flex; flex-direction:column; justify-content:center;
+  }
+  #sidebar ul { list-style:none; display:flex; flex-direction:column; gap:1.2rem; }
+  #sidebar a { text-decoration:none; color: var(--text); font-weight:500; transition: var(--transition); }
+  #sidebar a:hover { color: var(--accent1); }
+
+  /* --- WRAPPER --- */
+  #wrapper { margin-left:240px; padding:3rem; }
+
+  /* --- HERO --- */
+  #intro {
+    text-align:center; padding:4rem 2rem;
+  }
+  #intro .logo {
+    font-size:3rem; font-weight:700;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom:1rem;
+  }
+  #intro p { max-width:600px; margin:0.5rem auto; color: var(--text-muted); font-size:1.1rem; }
+  .actions .button {
+    display:inline-block; margin-top:1rem;
+    padding:0.8rem 1.8rem; border:none; border-radius:8px;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2)); color:#fff;
+    font-weight:600; box-shadow:0 6px 20px var(--shadow); text-decoration:none; transition: var(--transition);
+  }
+  .actions .button:hover { transform:translateY(-3px); }
+
+  /* --- PROJECT CARDS --- */
+  #one { display:flex; flex-direction:column; gap:2rem; margin-top:3rem; }
+  #one section {
+    background: var(--panel); padding:1.5rem; border-radius: var(--radius);
+    box-shadow:0 6px 20px var(--shadow); transition: var(--transition);
+  }
+  #one section:hover { transform: translateY(-5px); box-shadow:0 10px 25px var(--shadow); }
+  #one h2 { color: var(--accent1); margin-bottom:0.5rem; font-size:1.3rem; }
+  #one p { color: var(--text-muted); }
+  .tags { margin-top:0.5rem; display:flex; gap:0.5rem; }
+  .tag { background:#eee; padding:3px 10px; border-radius:6px; font-size:0.8rem; color: var(--text-muted); }
+
+  /* --- SKILLS --- */
+  #two { margin-top:3rem; }
+  .skills-wrapper { display:flex; gap:1.5rem; flex-wrap:wrap; }
+  .skills-wrapper > div { flex:1; min-width:220px; background: var(--panel); padding:1.5rem; border-radius: var(--radius); box-shadow:0 6px 20px var(--shadow); transition: var(--transition); }
+  .skills-wrapper > div:hover { transform: translateY(-3px); box-shadow:0 10px 25px var(--shadow); }
+  .skill-title { color: var(--accent1); margin-bottom:1rem; font-size:1.2rem; font-weight:600; }
+  .features section { margin-bottom:1rem; }
+  .features h3 { font-size:1rem; margin-bottom:0.3rem; color: var(--text); }
+  .features p { color: var(--text-muted); font-size:0.9rem; }
+
+  /* --- RESPONSIVE --- */
+  @media(max-width:900px){
+    #wrapper { margin-left:0; padding:1rem; }
+    #sidebar { position:relative; width:100%; height:auto; border:none; padding:1rem 0; display:flex; justify-content:center; }
+    #sidebar ul { flex-direction:row; gap:1rem; }
+    .skills-wrapper { flex-direction:column; }
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <ul>
+      <li><a href="#intro">Welcome</a></li>
+      <li><a href="#one">My projects</a></li>
+      <li><a href="#two">My skills</a></li>
+      <li><a href="#three">Get in touch</a></li>
+    </ul>
+  </section>
+
+  <div id="wrapper">
+
+    <!-- Intro -->
+    <section id="intro">
+      <h1 class="logo">Safae Br</h1>
+      <p>Data Analyst | Excel • SQL • Power BI</p>
+      <p>I build dashboards, analyze data, and create clear insights using SQL, Excel, and Power BI.</p>
+      <div class="actions">
+        <a href="#one" class="button">See my work</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="one">
+      <section>
+        <h2>Coffee Sales EDA</h2>
+        <p>Exploratory Data Analysis of a coffee shop dataset using Excel & Python.</p>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">EDA</span></div>
+        <div class="actions"><a href="#" class="button">View project</a></div>
+      </section>
+      <section>
+        <h2>Bike Sales SQL + Power BI</h2>
+        <p>Full pipeline: SQL cleaning → Power BI dashboard.</p>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span></div>
+        <div class="actions"><a href="#" class="button">View project</a></div>
+      </section>
+      <section>
+        <h2>Sales Dashboard (Power BI)</h2>
+        <p>Interactive dashboard analyzing revenue and performance.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+        <div class="actions"><a href="#" class="button">View project</a></div>
+      </section>
+      <section>
+        <h2>Restaurant Orders SQL Project</h2>
+        <p>Analyzed revenue trends, busiest hours, and customer segments.</p>
+        <div class="tags"><span class="tag">SQL</span></div>
+        <div class="actions"><a href="#" class="button">View project</a></div>
+      </section>
+    </section>
+
+    <!-- Skills -->
+    <section id="two">
+      <h2>My skills</h2>
+      <div class="skills-wrapper">
+        <div>
+          <h3 class="skill-title">Programming</h3>
+          <div class="features">
+            <section><h3>SQL</h3><p>Joins, CTEs, data cleaning, queries.</p></section>
+            <section><h3>HTML/CSS</h3><p>Responsive design & structure.</p></section>
+          </div>
+        </div>
+        <div>
+          <h3 class="skill-title">Business Tools</h3>
+          <div class="features">
+            <section><h3>Power BI</h3><p>DAX, dashboards, data modeling.</p></section>
+            <section><h3>Excel</h3><p>Pivot tables, cleaning, dashboards.</p></section>
+          </div>
+        </div>
+        <div>
+          <h3 class="skill-title">Other Skills</h3>
+          <div class="features">
+            <section><h3>Problem Solving</h3><p>Logical troubleshooting.</p></section>
+            <section><h3>Data Analysis</h3><p>EDA, insights, trends.</p></section>
+            <section><h3>Decision Support</h3><p>Helping companies make decisions.</p></section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

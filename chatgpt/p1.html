@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safae Br — Data Analyst Portfolio</title>
+  <style>
+    /* Basic reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    /* Hyperspace-inspired colors */
+    :root {
+      --dark-bg: #090A0F;
+      --deep-bg: #11131A;
+      --text-light: #CFD8E3;
+      --text-muted: #6C7A9E;
+      --accent1: #7C3AED;
+      --accent2: #06B6D4;
+      --neon: rgba(124, 58, 237, 0.75);
+      --neon2: rgba(6, 182, 212, 0.75);
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text-light);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      padding: 2rem 4rem;
+      background: var(--deep-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--text-light);
+    }
+
+    section {
+      padding: 6rem 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .hero .buttons a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .hero .buttons .btn-primary {
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: #fff;
+    }
+    .hero .buttons .btn-secondary {
+      background: none;
+      border: 2px solid var(--text-muted);
+      color: var(--text-muted);
+    }
+    .hero .buttons .btn-secondary:hover {
+      border-color: var(--accent1);
+      color: var(--accent1);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: var(--deep-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
+    }
+    .project-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: var(--accent1);
+    }
+    .project-card p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .neon-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .neon-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon), var(--neon2));
+      bottom: -4px;
+      filter: blur(8px);
+      border-radius: 8px;
+    }
+
+    /* About / Contact cards */
+    .card {
+      background: var(--deep-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Safae Br</div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="neon-underline">Data Analyst Portfolio</h1>
+    <p>I build actionable dashboards, clean & model data, and bring insights to life using Power BI, SQL, and analytical storytelling.</p>
+    <div class="buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="neon-underline">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Coffee Sales — EDA</h3>
+        <p>Exploratory data analysis of coffee sales: seasonality, top customers, and product insights.</p>
+        <div class="tags">
+          <span class="tag">Excel</span><span class="tag">EDA</span><span class="tag">Power BI</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Bike Sales — SQL + Power BI</h3>
+        <p>ETL in MySQL, creation of DAX measures, and interactive dashboards.</p>
+        <div class="tags">
+          <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Power BI</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Sales Dashboard — Power BI</h3>
+        <p>A full dashboard visualizing sales growth, YTD / PYTD, and supplier analysis.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+      </div>
+      <div class="project-card">
+        <h3>Restaurant Orders — SQL</h3>
+        <p>Order data modeling and KPIs in MySQL for restaurant operations.</p>
+        <div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="neon-underline">About Me</h2>
+    <div class="card">
+      <p>I am a data analyst passionate about turning raw data into actionable narratives. I combine SQL, Power BI, and Excel to build pipelines and dashboards that empower decision-making.</p>
+      <div class="grid-3">
+        <div>
+          <h4>Experience</h4>
+          <p>Tele-call center agent, where I developed strong communication and problem-solving skills alongside analytical thinking.</p>
+        </div>
+        <div>
+          <h4>Education</h4>
+          <p>Diploma in Digital Development — I continuously build my skills in data analysis, business intelligence, and SQL.</p>
+        </div>
+        <div>
+          <h4>Skills</h4>
+          <p>Power BI • MySQL • Excel • Python • Data Cleaning • DAX</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="neon-underline">Contact</h2>
+    <div class="card">
+      <form>
+        <div style="display: grid; gap: 1rem; grid-template-columns: 1fr 1fr;">
+          <input type="text" placeholder="Your Name" style="padding: .75rem; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: inherit;" />
+          <input type="email" placeholder="Your Email" style="padding: .75rem; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: inherit;" />
+          <input type="text" placeholder="Subject" style="grid-column: 1 / -1; padding: .75rem; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: inherit;" />
+          <textarea placeholder="Message" style="grid-column: 1 / -1; padding: .75rem; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: inherit; height: 120px;"></textarea>
+        </div>
+        <button type="submit" style="margin-top: 1rem; padding: .75rem 1.5rem; background: linear-gradient(90deg, var(--accent1), var(--accent2)); border:none; border-radius: 8px; color:white;">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Safae Br — Data Analyst · <a href="#" style="color: var(--text-muted)">GitHub</a> · <a href="#" style="color: var(--text-muted)">LinkedIn</a>
+  </footer>
+
+</body>
+</html>

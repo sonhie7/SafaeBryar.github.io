@@ -1,0 +1,110 @@
+/*
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Spotlights */
+
+	.spotlights > section > .image:before {
+		opacity: 0 !important;
+	}
+
+	
+	.spotlights > section > .content > .inner {
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+
+/* Wrapper */
+
+	.wrapper > .inner {
+		opacity: 1 !important;
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+	}
+
+
+
+	
+/* Sidebar */
+
+	#sidebar > .inner {
+		opacity: 1 !important;
+	}
+
+	#sidebar nav > ul > li {
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+
+	
+	#one .inner .tag {
+  font-size: 0.8rem !important;
+  padding: 0.35rem 0.9rem !important;
+  border-radius: 4px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+#one .inner .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* If you still need the c-image class */
+.c-image img {
+    width: 100%;           /* scale with container */
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+/* Spotlight sections layout */
+.spotlights > section {
+    display: flex;
+    flex-wrap: wrap; /* stack on small screens */
+    align-items: center;
+    gap: 2rem; /* spacing between image and text */
+}
+
+/* Image container */
+.spotlights > section > .c-image {
+    flex: 1 1 50%;       /* image takes half the width */
+    max-width: 700px;    /* optional max width */
+    margin: 0 auto;
+}
+
+/* Image styling */
+.spotlights > section > .c-image img {
+    width: 100%;         /* fill container */
+    height: auto;        /* keep aspect ratio */
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Content takes the other half */
+.spotlights > section > .content {
+    flex: 1 1 45%;
+    padding: 1rem;
+}
+
+
+
+
+
